@@ -25,7 +25,18 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "./node_modules/leaflet/dist/leaflet.css",
+              "src/styles.scss",
+              {
+                "input": "src/styles/themes/dark-theme.scss",
+                "bundleName": "dark-theme",
+                "inject": false
+              },
+              {
+                "input": "src/styles/themes/light-theme.scss",
+                "bundleName": "light-theme",
+                "inject": false
+              }
             ],
             "scripts": []
           },
@@ -84,7 +95,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           }

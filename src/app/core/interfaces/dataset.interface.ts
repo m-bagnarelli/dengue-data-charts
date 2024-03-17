@@ -16,7 +16,7 @@ export interface IData {
   department: string;
   event: string,
   age_group: string;
-  age_group_id: string;
+  age_group_id: number;
   province: string;
   total: number;
 }

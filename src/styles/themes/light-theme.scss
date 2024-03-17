@@ -1,0 +1,14 @@
+@use '@angular/material' as mat;
+@use '../utils';
+
+$theme-color-config: (
+  primary: mat.define-palette(mat.$deep-purple-palette),
+  accent: mat.define-palette(mat.$green-palette),
+);
+
+$app-theme: mat.define-light-theme(
+  utils.with-core-config($theme-color-config)
+);
+
+@include utils.create-theme-bundle($app-theme);
+

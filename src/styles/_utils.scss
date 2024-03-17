@@ -1,0 +1,21 @@
+@use '@angular/material' as mat;
+
+@function with-core-config($color-config) {
+  @return (
+    color: $color-config,
+    typography: mat.define-typography-config(
+      $font-family: 'Poppins'
+    )
+  )
+}
+
+@mixin create-theme-bundle($theme-config) {
+  @include mat.core-theme($theme-config);
+  @include mat.toolbar-theme($theme-config);
+  @include mat.divider-theme($theme-config);
+  @include mat.sidenav-theme($theme-config);
+  @include mat.icon-theme($theme-config);
+  @include mat.button-theme($theme-config);
+  @include mat.list-theme($theme-config);
+  @include mat.card-theme($theme-config);
+}
